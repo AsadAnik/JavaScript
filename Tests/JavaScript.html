@@ -1,0 +1,112 @@
+<script type="text/javascript">/*JavaScript*/
+
+///Some External core coding solutions(With JS)...	 
+	var user =  prompt("Are you student?");
+
+	if(user == "yes"){
+		alert("Wow you are a student!");
+	}else if(user == "no"){
+		alert("Oops you are not a student!");
+	}else if(user == ''){
+		alert('Empty!!!');
+	}else{
+		alert("Oh you are "+user+" I see");
+	}
+
+	///The practice of javascript...
+
+	var numberOne=prompt("Type number for checking Odd || Even!");
+
+	if(numberOne %2== 0){
+		window.document.write("<center>This is jor "+numberOne+"</center>");
+	}else if(numberOne %2== 1){
+		window.document.write("<center>Even Number this is "+numberOne+"</center>");
+	}else{
+		window.document.write("<center>Not a Number!!!</center>");
+	}
+
+	///The OOP,....
+
+	var car={
+		name:"Toyota",
+		model:"corolla",
+		wheels:6,
+		doors:2	
+	};
+
+	console.log("Called function here is :- "+typeof car);
+
+///OOP with methods..
+  var java={
+  	 type:"Object Oriented",
+  	 inheritence:"Yes",
+  	 encapsulation:"Yes",
+  	 folimorphisom:"Yes",
+
+  	 class: function(){
+  	 	alert('Hi all this is java function!');
+  	 }
+  };
+
+  console.log("<br/>Called Java Object here with function:- "+typeof java.class);
+
+  var integar=12;
+  var floatNum=1.5;
+  var string="Asad Anik";
+  var nullArea=null;
+  var boolean=false;
+  var blankEmpty='';
+  
+
+  console.log("1st one from integar "+typeof integar);
+  console.log("2nd one from floatNum "+typeof floatNum);
+  console.log("3rd one from string "+typeof string);
+  console.log("4th one from nullArea "+typeof nullArea);
+  console.log("5ev one from boolean "+typeof boolean);
+  console.log("6ix one from blankEmpty "+typeof blankEmpty);
+  console.log("7en one from undefine "+typeof undefine);
+
+  ///Another Object with data...
+
+  var human={
+/*Properties*/  	
+  	name:"Asad Anik",
+  	profession:"Engineer",
+  	department:"Software",
+  	lags:2,
+  	hands:2,
+  	fingersHand:5,
+  	fingersLag:5,
+/*Function*/
+  	fingers: function(){
+  		alert("We can bring anythings with hands fingers");
+  		document.write("You called fingers function!");
+  	}
+  };
+
+///Calling the function from object...
+   document.write(human.department);
+
+///CSS & HTML with JavaScript....
+   document.write("<h1 id='txt'>This is my H1 tag!</h1>");
+   var h1tag = document.getElementById('txt');
+
+//The another one for the main page here....
+/*The problem solving area*/
+var num1=prompt("Please type the number for see the numta to you!");
+var i;
+var sum=0;
+
+  for(i=1; i<10; i++){
+
+  	if(num1.length > 4){
+  		console.log("There is problem with system or code!");
+  		break;
+  	}
+  	sum = num1*i;
+  	console.log(i+"x"+num1+"="+sum+" <br/>");
+  }		
+
+
+/*END of the JavaScript*/</script>
+

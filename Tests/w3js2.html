@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--This is my body Area-->
+    
+    <h1 id="demo"></h1>
+    <h1 id="demo2"></h1>
+    <h1 id="demo3"></h1>
+    <h1 id="demo4"></h1>
+    <h1 id="demo5"></h1>
+
+    <script type="text/javascript">/*The Javascript main file*/
+
+        var fruits = ['Orange', 'Mango', 'Grapes', 'Apple'];
+
+        document.getElementById('demo').innerHTML = fruits.toString();
+        document.getElementById('demo').innerHTML = fruits.join(" * ");
+
+        let names = ['Asad', 'Anik', 'Hossain'];
+
+        document.getElementById('demo2').innerHTML = names;
+
+        names.pop();
+        document.getElementById('demo3').innerHTML = names; 
+
+        names.push('Queen');
+        document.getElementById('demo4').innerHTML = names;
+
+        names.shift();
+        document.getElementById('demo5').innerHTML = names;
+
+    /*End of this javascript*/</script>
+    
+</body>
+</html>

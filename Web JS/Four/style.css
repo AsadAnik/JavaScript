@@ -1,0 +1,132 @@
+/*This is the stylesheet*/
+body{
+    background: rgb(14, 70, 87);
+}
+
+/*Container*/
+.controler{
+    text-align: center;
+}
+
+#container{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 35%;
+    border: 10px solid rgb(78, 133, 156);
+    padding: 20px;
+    margin: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background: #fff;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+/*Main text styling here*/
+#container>.controler>h1{
+    color: lightgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+#container:hover h1{
+    color: gray;
+}
+
+#container input[type="search"]{
+    /*Forthesearchblankinputboxarea*/border: 2px solid lightgray;
+    width: 250px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 16px;
+    color: gray;
+    outline: none;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+#container .oneBtn{/*The Button*/
+    margin-bottom: 10px;
+    background: rgb(62, 72, 208);
+}
+#container .twoBtn{
+    background: red;
+}
+#container .btnExtra{/*Buttons extra edition*/
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/*The Hover side inner of there*/
+#container .btnExtra:hover{
+    letter-spacing: 5px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    cursor: pointer;
+}
+#container .btnExtra:focus{
+    border: 1px solid #000;
+}
+
+/*CSS for list the checkbox inner here*/
+.list{
+    float: left;
+    margin: 0;
+    margin-top: 20%;
+    text-align: left;
+    margin-left: -5px;
+}
+.list ul{
+    list-style: none;
+    margin: 0;
+    margin-left: -18px;
+}
+
+.list ul li{
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+}
+
+.list ul .myCheck{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 18px;
+    color: gray;
+}
+
+/*When will click on the checkbox then it will take an action*/
+.list ul li input[type="checkbox"]:checked + label{
+        text-decoration: line-through;
+}
