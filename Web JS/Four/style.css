@@ -130,3 +130,4 @@ body{
 .list ul li input[type="checkbox"]:checked + label{
         text-decoration: line-through;
 }
+

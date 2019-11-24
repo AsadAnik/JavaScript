@@ -3,7 +3,7 @@ let myFunction = function (name){
     console.log(`Hi ${name} Whats up!`)
 }
 
-myFunction('Fatema Sabina')
+myFunction('Hossain Sultan')
 
 //Another Function to add two perameters & Return type..
 let myAnotherFunc = function (firstName, lastName){

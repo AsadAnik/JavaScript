@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Errors | Try Catch</title>
+</head>
+
+<style type="text/css">/*The CSS stylesheet for some of them styling here*/
+	a{
+		color: red;
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+/*END fo the CSS stylesheet*/</style>
+
+<body style="text-align: center;">
+
+	<!--All HTML code insert from here-->
+		<h2>The Range Error</h2>
+		<p>You cannot set the number of significant digits of a number to 500:</p>
+		<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_error_rangeerror">
+			<p class="demo"></p>
+		</a>
+
+		<br>
+		<hr>
+
+	<!--Reference Error-->
+		<h2>The Reference Error</h2>
+		<p>You cannot use the value of a non-existing variable:</p>
+		<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_error_referenceerror">
+			<p id="demo"></p>
+		</a>	
+
+		<br>
+		<hr>
+
+	<!--Reference Error-->
+		<h2>The Syntax Error</h2>
+		<p>You cannot evaluate code that contains a syntax error:</p>
+		<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_error_syntaxerror">
+			<p class="demo2"></p>	
+		</a>
+
+		<br>
+		<hr>
+
+	<!--Type Error-->	
+		<h2>Type Error</h2>
+		<p>You cannot convert a number to upper case:</p>
+		<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_error_typeerror">
+			<p id="demo2"></p>
+		</a>
+
+		<br>
+		<hr>
+
+	<!--URI Error-->
+		<h2>JavaScript Errors</h2>
+		<p>Some characters cannot be decoded with decodeURI():</p>
+		<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_error_urierror">
+			<p class="uri"></p>
+		</a>	
+
+</body>
+
+  <!--JS added for see the error with the source code without internet connection-->		
+	<script type="text/javascript">/*The Javascript file*/
+		// document.querySelector('.style').setAttribute('style', 'color : red');
+		///The Range Error...
+			var num = 1;
+
+			try{
+				num.toPrecision(500);
+			}
+			catch(error){
+				document.querySelector('.demo').innerHTML = error.name;
+			}
+
+		///Reference Error...
+			var x;
+
+			try{
+				x = y + 1;
+			}
+			catch(error){
+				document.getElementById('demo').innerHTML = error.name;	
+			}	
+
+		///Syntax Error...
+			try{
+				eval("alert('Hello World)");
+			}	
+			catch(error){
+				document.querySelector('.demo2').innerHTML = error.name;
+			}
+
+		///Type Error...
+			var num = 1; 
+
+			try{
+				num.toUpperCase();
+			}	
+			catch(error){
+				document.getElementById('demo2').innerHTML = error.name;
+			}
+
+		///URI Error...
+			try{
+				decodeURI("%%%");
+			}	
+			catch(error){
+				document.querySelector('.uri').innerHTML = error.name;
+			}
+	/*END of the javascript*/</script>
+
+</html>

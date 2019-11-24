@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try Catching | JS</title>
+</head>
+
+<body>
+
+	<input type="text" id="demo">
+	<button type="button" id="btn">Test Input</button>
+	<p class="showResult"></p>
+
+</body>
+
+<script type="text/javascript">
+
+	document.getElementById('btn').addEventListener('click', myFunction, false);
+
+	function myFunction(){
+		var message, x;
+		message = document.querySelector('.showResult');
+		message.innerHTML = '';
+		x = document.querySelector('#demo').value;
+
+		try{
+
+			if(x == '') throw "empty";
+			if(isNaN(x)) throw "not a number";
+			x = Number(x);
+
+			if(x < 5) throw "too low";
+			if(x > 10) throw "too hight";
+		}
+		catch(error){
+			message.innerHTML = "Input is "+error;	
+		}
+		finally{
+			document.getElementById('demo').value = '';
+		}
+	}
+</script>
+
+</html>

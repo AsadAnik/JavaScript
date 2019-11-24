@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The JSON html file</title>
+</head>
+<body>
+ <!--HTML Body Area-->	
+	<h1>Create Object from JSON string</h1>
+
+		<p id="demo"></p>
+
+
+ <!--The JavaScript-->
+	<script type="text/javascript">/*The JavaScript file*/
+		alert('JS is Connected!');
+
+		var text = '{"employees":[' +
+			'{"firstName":"John","lastName":"Doe" },' +
+			'{"firstName":"Anna","lastName":"Smith" },' +
+			'{"firstName":"Peter","lastName":"Jones" }]}';
+
+		obj = JSON.parse(text);	
+		document.getElementById('demo').innerHTML = 
+		obj.employees[1].firstName + " " + obj.employees[1].lastName;
+	/*END of JavaScript*/</script>
+</body>
+</html>
