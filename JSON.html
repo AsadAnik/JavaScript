@@ -9,6 +9,8 @@
 
 		<p id="demo"></p>
 
+		<p id="playersDemo"></p>
+
 
  <!--The JavaScript-->
 	<script type="text/javascript">/*The JavaScript file*/
@@ -19,9 +21,22 @@
 			'{"firstName":"Anna","lastName":"Smith" },' +
 			'{"firstName":"Peter","lastName":"Jones" }]}';
 
-		obj = JSON.parse(text);	
+		obj = JSON.parse(text)
 		document.getElementById('demo').innerHTML = 
 		obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+
+	 ///JSON Array Data...
+		var players = '{"barcelonaTeam": ['
+		+'{"name": "Messi", "height": "5.7Inchi" },'+
+		'{"name": "Neymar": "height": "5.10Inchi"},'+
+		'{"name": "Ronaldhinho": "height": "5.8Inchi"}]}';
+
+			var javascriptData = JSON.parse(players)
+
+		var playersDemoHTML = document.getElementById('playersDemo');
+			playersDemoHTML.innerHTML = javascriptData.barcelonaTeam[1];
+
 	/*END of JavaScript*/</script>
 </body>
 </html>
