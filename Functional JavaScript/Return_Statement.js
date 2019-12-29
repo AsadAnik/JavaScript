@@ -20,7 +20,7 @@
                 console.log(this.name, this.skill);
             }
         }
-    }
+    }  
     
     var obj = example()
     obj.print();
