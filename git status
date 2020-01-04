@@ -1,0 +1,30 @@
+[33mcommit ae1fcddd0472cad1867db552cf2842d0c9fdfc91[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: asadanik <s.engineer63@gmail.com>
+Date:   Tue Dec 31 00:05:54 2019 +0600
+
+    JavaScript
+
+[1mdiff --git a/Functional JavaScript/ArraySorting.js b/Functional JavaScript/ArraySorting.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ac98d2d[m
+[1m--- /dev/null[m
+[1m+++ b/Functional JavaScript/ArraySorting.js[m	
+[36m@@ -0,0 +1,6 @@[m
+[32m+[m[32m///The Array list here...[m
+[32m+[m[32mvar arr = [234, 120, 34, 54, 9, 10, 01, 23, 7,  12, 45, 90, 100, 345, 122][m
+[32m+[m
+[32m+[m[32marr.sort()[m
+[32m+[m
+[32m+[m[32mconsole.log(arr);[m
+[1mdiff --git a/Functional JavaScript/clouser.js b/Functional JavaScript/clouser.js[m
+[1mindex 3bcc2cd..da57921 100644[m
+[1m--- a/Functional JavaScript/clouser.js[m	
+[1m+++ b/Functional JavaScript/clouser.js[m	
+[36m@@ -16,4 +16,4 @@[m [mfunction windows(user){[m
+     return osx;[m
+ }[m
+ [m
+[31m-windows('asadanik')('Windows 10Pro')//asadanik is our clouser...[m
+\ No newline at end of file[m
+[32m+[m[32mwindows('asadanik')('Linux Ubuntu')//asadanik is our clouser...[m
+\ No newline at end of file[m
