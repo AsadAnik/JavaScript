@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scal=1">
+    <meta name="keyword" content="JS, JS-Test, js test, js, textjs, jstest">
+</head>
+
+
+<body>
+    <!--The main body area of this HTML page-->
+    <textarea id="text" cols="30" rows="10" placeholder="Write Your text here..."></textarea>
+    <br>
+
+    <button id="btn_1" type="button">Check Sentences</button>
+    <button id="btn_2" type="button">Check Vowels</button>
+    <button id="btn_3" type="button">Check Date and Time</button>
+
+    <br>
+
+    <span id="txt">
+
+    </span>
+
+</body><!--END of the body section here!-->
+
+
+<script type="text/javascript">/*The Javascript here*/
+
+var button1 = document.getElementById('btn_1');
+var button2 = document.getElementById('btn_2');
+
+button1.addEventListener('click', counterSentence, false);
+button2.addEventListener('click', counterVowel, true);
+
+/*For Checking the sentence*/
+ function counterSentence(){
+     var words = document.getElementById('text').value;
+     var count = 0;
+     for(i=0; i<words.length; i++){
+         if(words[i] == ' '){
+            count++;
+        } 
+     }
+     count++;
+     alert("Words are "+count);
+ }
+
+/*For Checking the vowels*/
+  function counterVowel(){
+    var words = document.getElementById('text').value;
+    var count = 0;
+    for(i=0; i<words.length; i++){
+        if((words[i]=='a' || words[i]=='A') || (words[i]=='e' || words[i]=='E') || (words[i]=='i' || words[i]=='I') || (words[i]=='o' || words[i]=='O') || (words[i]=='u' || words[i]=='U')){
+            count++;
+        }
+    }
+    alert("Vowels are "+count);
+  }
+
+  //For Checking the date and time....
+  /*The Time and Date*/
+    var button3 =  document.getElementById('btn_3')
+    var showOf = document.getElementById('text')
+
+    button3.addEventListener('click',dateTime, false)
+
+    function dateTime(){
+        showOf.value = Date();
+    }
+
+/*JavaScirpt*/</script>
+</html>
