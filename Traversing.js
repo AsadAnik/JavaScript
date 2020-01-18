@@ -23,4 +23,29 @@ let myList = [
         items.forEach((items2, index2, list2) => {
             console.log(items2)
         })
-    })    
+    })   
+    
+    console.log('\n')
+
+///Traversing with Object list..
+    let myObj = {
+        objList: [
+            {name: 'Asad Anik', age: 19}, 
+            {name: 'Alex Jecson', age: 22}, 
+            {name: 'Morin Lera', age: 17}
+        ]
+    }
+    
+    var createObj = myObj.objList;
+
+    for(let i=0; i<createObj.length; i++){
+        for(let props in createObj){
+            console.log(props, createObj[props].name, createObj[props].age)
+        }
+    }
+
+  console.log('\nWith ES6 Standard...')  
+   //Now with forEach function...
+    createObj.forEach((items, index, list) => {
+        console.log(index, items.name, items.age)
+    }) 
