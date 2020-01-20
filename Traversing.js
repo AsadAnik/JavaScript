@@ -49,3 +49,9 @@ let myList = [
     createObj.forEach((items, index, list) => {
         console.log(index, items.name, items.age)
     }) 
+    
+//Traversing with letters in the list....
+    let poem = 'I am a good boy with my good coding engle pc!';
+
+    let travelledPoem = poem.split(/\W+/)//To Divide the words themselfs...
+    console.log(travelledPoem.filter((x) => (x.length > 3)))
