@@ -22,10 +22,14 @@
 
  //With Object Prototype...
     Asadanik.prototype.objPro = {
-        nickname: 'AA',
+        nickname: 'Anik',
         email: 's.engineer63@gmail.com',
         username: 'asadanik'
     }   
-    console.log(anotherObj.objPro.nickname)
+    let name = anotherObj.objPro.nickname;
+    console.log('My nickname is : ', name)
+    
+    let id = myObject.objPro.email;
+    console.log('ID is : ', id)
 
 
