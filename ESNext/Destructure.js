@@ -47,3 +47,23 @@ let aa = 8, bb = 6;
 // [aa, bb] = [bb, aa];
 [bb, aa] = [aa, bb];
 console.log(`aa = ${aa} \nbb = ${bb}`)
+
+
+///Another Example of Destruct Functions Perameters from Object...
+///Feel with the function and destructing the parameters...
+//The Object..
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+///Destruct the Obeject as a functions parameter...
+const half = ({ max, min }) => (max + min) / 2.0;
+
+///use Function and showking the output..
+const usefunction = half(stats);
+console.log(usefunction);
