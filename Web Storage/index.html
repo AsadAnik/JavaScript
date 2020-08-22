@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Storage</title>
+</head>
+<body>
+	<!----------------EXAMPLE OF LOCAL WEB STORAGE-------------------->
+	<header style="text-align: center">
+		<h1>
+			<span>Local Web Storage From, </span>
+			<span id="showOwnersName"></span>
+		</h1>
+
+		<p id="paragraph"></p>
+	</header>
+
+  <!------Local Storage JavaScript------->
+	<script type="text/javascript">/*The JavaScript*/
+		///hahah we are writing the magical web storage code...
+		const ourElement = document.getElementById('showOwnersName');
+		const p = document.getElementById('paragraph');
+
+		if(typeof(Storage) !== "undefined"){
+			///Make Set the data into the local storage..
+			window.localStorage.setItem("fullname", "Yeaseen Arafat Armaan");
+			window.localStorage.setItem("bio", "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod");
+
+			///Removed the local storages data...	
+			window.localStorage.removeItem("fullname");
+
+			//Then Get data from local web storage...
+			ourElement.innerHTML = window.localStorage.getItem("fullname");
+			p.innerHTML = window.localStorage.getItem("bio");
+
+		}else{
+			console.log('The Web Storage is not supported into your Browser!!!');
+			ourElement.innerHTML = "NOT supported Browser!!!";
+			p.innerHTML = "Unsupported Browser!!";
+		}
+	</script>
+
+
+	<!--Another Example for Local & Session Web storage-->
+	<div style="display: grid; justify-content: center; text-align: center">
+		<button type="button" id="btn" onclick="clickCounter()">Click To Count!</button>
+
+		<p>You Have Cliked almost (<span id="counter"> </span>) Time.</p>
+		<p>In the Local Storage..</p>
+	</div>
+	<br>
+	<hr>
+
+  <!------Local Storage JavaScript------->
+	<script type="text/javascript">/*The JavaScript*/
+		function clickCounter(){
+			if(typeof(Storage) !== "undefined"){
+				if(window.localStorage.clickcount){
+					///Set the Number local storage increments when clicks...
+					window.localStorage.clickcount = Number(window.localStorage.clickcount) + 1;
+
+					document.getElementById('counter').innerHTML = window.localStorage.clickcount;
+				}else{
+					window.localStorage.clickcount = 1;
+				}
+			}else{
+				console.log('The Web Storage is not supported!!!');
+			}
+		}
+	</script>
+
+
+<!------------------EXAMPLE OF LOCAL WEB STORAGE--------------------->
+	<!--The Session Web Storage-->
+	<div style="display: grid; justify-content: center; text-align: center">
+		<h1>Local Web Storage</h1>
+
+		<button type="button" onclick="clickSession()">Count Session!</button>
+
+		<p>You Have Cliked session (<span id="counter2"> </span>) Time.</p>
+		<p>In the Session Storage, When close tab the data will disapear..</p>
+	</div>
+
+  <!------Session Storage JavaScript------->
+	<script type="text/javascript">/*The JavaScript*/
+		function clickSession(){
+			if(typeof(Storage) !== "undefined"){
+				if(window.sessionStorage.clickcount){
+					///Set the Number local storage increments when clicks...
+					window.sessionStorage.clickcount = Number(window.sessionStorage.clickcount) + 1;
+
+					document.getElementById('counter2').innerHTML = window.sessionStorage.clickcount;
+				}else{
+					window.sessionStorage.clickcount = 1;
+				}
+			}else{
+				console.log('Web Session Storage is not supported!!!');
+			}
+		}
+	</script>
+</body>
+</html>
