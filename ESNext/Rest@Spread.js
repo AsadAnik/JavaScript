@@ -39,3 +39,28 @@ const arr = removeFirstTwoElement(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 //Showing Results...
 console.log(`source : ${[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}`);
 console.log(`arr : ${arr}`);
+
+console.log('\n');
+
+
+
+///Very Easiest Way to Understand Spread Operator..
+const arr1 = [1, 2, 3, 4];
+const arr2 = [...arr1, 5, 6, 7, 8, 9];
+console.log('Spreaded Operator -> ', arr2);
+
+//Another Easy Way..
+function multipleItemSum(a, b, c){
+  console.log('MultileItems Result -> ', a+b+c);
+}
+
+const multipleItem = [10, 20, 30];
+multipleItemSum(...multipleItem);
+
+
+//Easy Way Of Rest Parameter / Operator...
+function multipleZipArchive(...args){
+  console.log(args.sort());
+}
+
+multipleZipArchive(4, 5, 3, 2, 1);
